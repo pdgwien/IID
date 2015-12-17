@@ -40,6 +40,9 @@
 			$('#inputDest').text(QueryString.found_event);
 			$('#found_title').text(QueryString.found_title);
 			$('#found_img').attr("src", "images/"+QueryString.id+".jpg");
+			if(QueryString.found == "1"){
+				$('#found_search').text("wird gesucht")
+			}
 		});
 	</script>
     <div class="navbar navbar-default navbar-fixed-top">
@@ -51,7 +54,7 @@
     </div>
     <div class="container-fluid" style="padding-top: 55px; margin-left: 50px; ">
         <div class="jumbotron">
-            <h2>Diese <span id="found_title">Brille</span> wird gesucht!</h2>
+            <h2>Diese <span id="found_title">Brille</span> <span id="found_search">wurde gefunden</span>!</h2>
             <form class="form-horizontal" style="height: 50%">
                 <div class="form-group">
                     <div class="col-md-4"> <img src="images/brille.jpg" id="found_img" class="img-responsive thumbnail" style="max-width: 33%; min-height: 50%;"> </div>
