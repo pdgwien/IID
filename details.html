@@ -3,87 +3,99 @@
 
 <head>
     <meta charset="utf-8">
-
     <title>Details</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <script src="js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-</head>
+    <link rel="stylesheet" href="css/font-awesome.min.css"> </head>
 
 <body>
-<div class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid" style="margin-left: 50px; margin-right: 50px;">
-        <div class="navbar-header">
-            <a href="../" class="navbar-brand">Verloren & Gefunden</a>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid" style="margin-left: 50px; margin-right: 50px;">
+            <div class="navbar-header"> <a href="index.html" class="navbar-brand">Verloren &amp; Gefunden</a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
         </div>
     </div>
-</div>
-
-<div class="container-fluid" style="padding-top: 55px; margin-left: 50px; ">
-    <div class="jumbotron">
-        <h2>Diese Brille wird gesucht!</h2>
-        <form class="form-horizontal" style="height: 50%">
-            <div class="form-group">
-                <div class="col-md-4">
-                    <img src="images/brille.jpg" class="img-responsive thumbnail" style="max-width: 33%; min-height: 50%;">
-                </div>
-
-                <div class="col-md-8">
-                    <div class="form-group">
-                        <label for="inputDesc" class="col-md-2 control-label">Beschreibung</label>
-                        <div class="col-md-10">
-                            <output class="form-control" id="inputDesc" placeholder="Bezeichnung">Rayban Brille mit starkem Rahmen</output>
+    <div class="container-fluid" style="padding-top: 55px; margin-left: 50px; ">
+        <div class="jumbotron">
+            <h2>Diese Brille wird gesucht!</h2>
+            <form class="form-horizontal" style="height: 50%">
+                <div class="form-group">
+                    <div class="col-md-4"> <img src="images/brille.jpg" class="img-responsive thumbnail" style="max-width: 33%; min-height: 50%;"> </div>
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="inputDesc" class="col-md-2 control-label">Beschreibung</label>
+                            <div class="col-md-10">
+                                <output class="form-control" id="inputDesc" placeholder="Bezeichnung">Rayban Brille mit starkem Rahmen</output>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="inputDest" class="col-md-2 control-label">Event</label>
-                        <div class="col-md-10">
-                            <output class="form-control" id="inputDest" placeholder="Ort">Event 1</output>
+                        <div class="form-group">
+                            <label for="inputDest" class="col-md-2 control-label">Event</label>
+                            <div class="col-md-10">
+                                <output class="form-control" id="inputDest" placeholder="Ort">Event 1</output>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-            </div>
-        </form>
-
-        <form class="form-horizontal">
-            <div class="form-group">
-                <div class="col-md-4">
-                    <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-                    <div style='overflow:hidden;height:400px;width:500px;'>
-                        <div id='gmap_canvas' style='height:300px;width:400px;'></div>
-                        <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-                    </div> <a href='http://masterarbeitschreiben.com/'>masterarbeitschreiben.com</a>
-
-                    <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=051a5df5e1a2b7977ee019a9af5d4edc77088a4e'></script>
-                    <script type='text/javascript'>function init_map(){var myOptions = {zoom:12,center:new google.maps.LatLng(48.2314692,16.35366339999996),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.2314692,16.35366339999996)});infowindow = new google.maps.InfoWindow({content:'<strong>Fundort</strong><br>Währinger Gürtel 172<br>1090 Vienna<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-                </div>
-
-                <div class="col-md-8">
-                    <div id="buttonKontakt">
-                        <a id="contactButton" class="btn btn-success" onclick="contactMe()">Nehmen sie mit dem Finder Kontakt auf</a>
+            </form>
+            <form class="form-horizontal">
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+                        <div style='overflow:hidden;height:400px;width:500px;'>
+                            <div id='gmap_canvas' style='height:300px;width:400px;'></div>
+                            <style>
+                                #gmap_canvas img {
+                                    max-width: none!important;
+                                    background: none!important
+                                }
+                            </style>
+                        </div> <a href='http://masterarbeitschreiben.com/'>masterarbeitschreiben.com</a>
+                        <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=051a5df5e1a2b7977ee019a9af5d4edc77088a4e'></script>
+                        <script type='text/javascript'>
+                            function init_map() {
+                                var myOptions = {
+                                    zoom: 12,
+                                    center: new google.maps.LatLng(48.2314692, 16.35366339999996),
+                                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                                };
+                                map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+                                marker = new google.maps.Marker({
+                                    map: map,
+                                    position: new google.maps.LatLng(48.2314692, 16.35366339999996)
+                                });
+                                infowindow = new google.maps.InfoWindow({
+                                    content: '<strong>Fundort</strong><br>Währinger Gürtel 172<br>1090 Vienna<br>'
+                                });
+                                google.maps.event.addListener(marker, 'click', function() {
+                                    infowindow.open(map, marker);
+                                });
+                                infowindow.open(map, marker);
+                            }
+                            google.maps.event.addDomListener(window, 'load', init_map);
+                        </script>
                     </div>
-                    <div id="kontaktFormular" style="visibility: hidden">
-                        <output id="kontaktAufnehmen" name="kontaktAufnehmen">Schreiben Sie dem Finder/Suchenden ein E-Mail!</output>
-                        <textarea id="info" name="info" style="margin-left: 30px;" rows="10" cols="150"></textarea>
-                        <p/>
-                        <button type="submit" class="btn btn-default">Senden</button>
+                    <div class="col-md-8">
+                        <div id="buttonKontakt"> <a id="contactButton" class="btn btn-success" onclick="contactMe()">Nehmen sie mit dem Finder Kontakt auf</a> </div>
+                        <div id="kontaktFormular" style="visibility: hidden">
+                            <output id="kontaktAufnehmen" name="kontaktAufnehmen">Schreiben Sie dem Finder/Suchenden ein E-Mail!</output>
+                            <textarea id="info" name="info" style="margin-left: 30px;" rows="10" cols="150"></textarea>
+                            <p/>
+                            <button type="submit" class="btn btn-default">Senden</button>
+                        </div>
                     </div>
+                    <script>
+                        function contactMe() {
+                            //                        document.getElementById("info").style.visibility = 'visible';
+                            document.getElementById("kontaktFormular").style.visibility = 'visible';
+                            document.getElementById("buttonKontakt").style.visibility = 'hidden';
+                        }
+                    </script>
                 </div>
-
-                <script>
-                    function contactMe() {
-//                        document.getElementById("info").style.visibility = 'visible';
-                        document.getElementById("kontaktFormular").style.visibility = 'visible';
-                        document.getElementById("buttonKontakt").style.visibility = 'hidden';
-                    }
-                </script>
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
-</div>
-</div>
-<!-- content -->
+    <!-- content -->
 </body>
+
 </html>
