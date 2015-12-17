@@ -29,42 +29,47 @@
 			<form class="form-horizontal">
 				<div class="form-group">
 					<div class="col-md-4">
-						<img style="height: 180px" src="images/mantel.jpg" class="thumbnail"/>
+						<img style="height: 180px" src="images/hut.jpg" class="thumbnail"/>
 						<div class="form-group">
 							<input type="file" id="inputFile">
 						</div>
 					</div>
 					<div class="col-md-8">
 						<div class="form-group">
-							<label for="inputDesc" class="col-md-2 control-label">Bezeichnung</label>
+							<label for="inputDesc" class="col-md-2 control-label">Bezeichnung*</label>
 							<div class="col-md-10">
 								<input type="text" class="form-control" id="inputDesc" placeholder="Bezeichnung">
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputKategorie" class="col-md-2 control-label">Kategorie</label>
+							<label for="inputKategorie" class="col-md-2 control-label">Kategorie*</label>
 							<div class="col-md-10">
 								<select class="form-control" id="inputKategorie">
-									<option>Geldbörse</option>
-									<option>Handy</option>
 									<option>Kleidung</option>
+									<option>Handy</option>
+									<option>Geldbörse</option>
 									<option>Diverses</option>
 								</select>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputEvent" class="col-md-2 control-label">Event</label>
+							<label for="inputEvent" class="col-md-2 control-label">Event*</label>
 							<div class="col-md-10">
 								<select class="form-control" id="inputEvent">
-									<option>Event1</option>
-									<option>Event2</option>
-									<option>Event3</option>
-									<option>Event4</option>
+									<option>Semester Opening</option>
+									<option>Semester Closing</option>
+									<option>Christkindlmarkt</option>
+									<option>Weihnachtsfeier</option>
+									<option>Nova Rock</option>
+									<option>Frequency</option>
+									<option>Informatik Festl</option>
+									<option>Sponsion TU</option>
+									<option>Osterfeier</option>
 								</select>
 							</div>
 						</div>
 						<div class="form-group">
-							<label for="inputEmail" class="col-md-2 control-label">Email address</label>
+							<label for="inputEmail" class="col-md-2 control-label">Email address*</label>
 							<div class="col-md-10">
 								<input type="email" class="form-control" id="inputEmail" placeholder="Email">
 							</div>
@@ -79,7 +84,7 @@
 				</div>
 				
 				<div class="form-group">
-					<label for="inputBeschreibung">Beschreibung</label>
+					<label for="inputBeschreibung">Beschreibung*</label>
 					<textarea class="form-control" id="inputBeschreibung" rows="3"></textarea>
 				</div>
 				
@@ -94,20 +99,45 @@
         <table class="table table-hover">
 			<thead>
 				<tr>
+					<th>Abbildung</th>
 					<th>Bezeichnung</th>
-					<th>Event</th>
 					<th>Kategorie</th>
-					<th>Kontakt</th>
-					<th>Buttons</th>
+					<th>Event</th>
+					<th>Beschreibung</th>
 				</tr>
 			</thead>
 			<tbody>
 				<tr>
-					<td>Brauner Mantel</td>
-					<td>Event 3</td>
-					<td>Kleidung</td>
-					<td>plshelp@me.net</td>
-					<td><button type="button" class="btn btn-default">Öffnen</button></td>
+					<tbody>
+						<tr>
+							<td><img src="images/hut.jpg" width="*" height="30" alt="Hut"></td>
+							<td><a href="detail.html" title="Hut">Hut</a></td>
+							<td>Kleidung</td>
+							<td>Semester Opening</td>
+							<td>schwarzer Hut</td>
+						</tr>
+						<tr>
+							<td><img src="images/brille.jpg" width="*" height="30" alt="Brille"></td>
+							<td><a href="detail.html" title="Brille">Brille</a></td>
+							<td>Diverses</td>
+							<td>Semester Closing</td>
+							<td>schwarze Brille</td>
+						</tr>
+						<tr>
+							<td><img src="images/fuehrerschein.jpg" width="*" height="30" alt="Führerschein"></td>
+							<td><a href="detail.html" title="Führerschein">Führerschein</a></td>
+							<td>Diverses</td>
+							<td>Weihnachtsfeier</td>
+							<td>Führerschein</td>
+						</tr>
+						<tr>
+							<td><img src="images/geldboerse.jpg" width="*" height="30" alt="Geldbörse"></td>
+							<td><a href="detail.html" title="Geldbörse">Geldbörse</a></td>
+							<td>Geldbörse</td>
+							<td>Nova Rock</td>
+							<td>schwarze Ledergeldbörse</td>
+						</tr>
+					</tbody>
 				</tr>
 			</tbody>
 		</table>
