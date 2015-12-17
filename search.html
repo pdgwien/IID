@@ -5,12 +5,37 @@
     <meta charset="utf-8">
 
     <title>Suchen</title>
+    <script src="js/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <script src="js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+	.event_selected{
+		background-color: #337ab7; color:#fff; font-weight:bold;
+	}
+	.events{
+		cursor:pointer;
+	}
+</style>
 </head>
 
 <body>
+<script>
+$( document ).ready(function() {
+	$('.events td').click(function(e) {
+        	$('.events td').removeClass("event_selected");
+			$(this).addClass("event_selected");
+			if($(this).text() == "Informatik Festl"){
+				$('#event_informatik_festl').show();
+				$('#event_alt').hide();
+			} else {
+				$('#event_informatik_festl').hide();
+				$('#event_alt').show();			
+			}
+			
+	});
+});
+</script> 
     <div class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid" style="margin-left: 50px; margin-right: 50px;">
             <div class="navbar-header">
@@ -21,25 +46,13 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-
-            <div class="navbar-right">
-                <form class="navbar-form" role="search">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                        <div class="input-group-btn">
-                            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
         </div>
     </div>
     
     <div class="container-fluid" style="padding-top: 100px; margin-left: 50px; margin-right: 50px;">
     
     <div class="col-md-3">
-   <table class="table table-condensed table-hover table-bordered">
+   <table class="table table-condensed table-hover table-bordered events">
         <thead>
           <tr>
             <th><input type="text" class="form-control" placeholder="Events durchsuchen" name="srch-term" id="srch-term"></th>
@@ -47,53 +60,46 @@
         </thead>
         <tbody>
           <tr>
-            <td>Event 1</td>
+            <td>Christkindlmarkt</td>
           </tr>    
           <tr>
-            <td>Event 2</td>
+            <td>Frequency</td>
           </tr> 
           <tr>
-            <td>Event 3</td>
+            <td>Halloween Feier</td>
           </tr> 
           <tr>
-            <td>Event 4</td>
+            <td class="event_selected">Informatik Festl</td>
           </tr> 
           <tr>
-            <td  style="background-color: #337ab7; color:#fff; font-weight:bold;">Event 5</td>
+            <td>Maschinenbau Festl</td>
           </tr> 
           <tr>
-            <td>Event 6</td>
+            <td>Mittelalterfest</td>
           </tr> 
           <tr>
-            <td>Event 7</td>
+            <td>Nova Rock</td>
           </tr> 
           <tr>
-            <td>Event 8</td>
+            <td>Osterfeier</td>
           </tr> 
           <tr>
-            <td>Event 9</td>
+            <td>Semester Closing</td>
           </tr> 
           <tr>
-            <td>Event 10</td>
+            <td>Semester Opening</td>
           </tr>     
           <tr>
-            <td>Event 11</td>
+            <td>Sponsion TU</td>
           </tr>                 
           <tr>
-            <td>Event 12</td>
-          </tr>                 
-          <tr>
-            <td>Event 13</td>
-          </tr>                 
-          <tr>
-            <td>Event 14</td>
-          </tr>                 
-
-
+            <td>Weihnachtsfeier</td>
+          </tr>                               
         </tbody>
       </table>
     </div>
-    <div class="col-md-9">
+    
+    <div class="col-md-9"  id="event_informatik_festl">
    <table class="table table-striped table-condensed">
         <thead>
           <tr>
@@ -107,64 +113,64 @@
         </thead>
         <tbody>
           <tr>
-            <td><img src="images/mantel.jpg" width="*" height="30" alt="mantel"></td>
-            <td><a href="detail.html" title="Mantel">Mantel</a></td>
-<td>Kleidung</td>
+            <td><img src="images/autoschluesselBMW.jpg" width="*" height="30" alt="mantel"></td>
+            <td><a href="details.html?id=autoschluesselBMW&desc=schwarz, silber" title="Mantel">Autoschlüssel BMW</a></td>
+<td>Diverses</td>
             <td>14.12.2015</td>
             <td>Bar</td>
-            <td>braun, lange, Gürtel</td>
+            <td>schwarz, silber</td>
+          </tr>
+          <tr>
+            <td><img src="images/autoschluesselVW.jpg" width="*" height="30" alt="mantel"></td>
+            <td><a href="details.html?id=autoschluesselVW&desc=schwarz, silber" title="Mantel">Autoschlüssel VW</a></td>
+<td>Diverses</td>
+            <td>14.12.2015</td>
+            <td>Garderobe</td>
+            <td>schwarz, silber</td>
+          </tr>
+          <tr>
+            <td><img src="images/brille.jpg" width="*" height="30" alt="mantel"></td>
+            <td><a href="details.html?id=brille&desc=durchsichtig, schwarzer Rahmen" title="Mantel">Brille</a></td>
+<td>Diverses</td>
+            <td>14.12.2015</td>
+            <td>WC</td>
+            <td>durchsichtig, schwarzer Rahmen</td>
+          </tr>
+          <tr>
+            <td><img src="images/fuehrerschein.jpg" width="*" height="30" alt="mantel"></td>
+            <td><a href="details.html?id=fuehrerschein&desc=scheckkartenformat, österreichisch" title="Mantel">Führerschein</a></td>
+<td>Diverses</td>
+            <td>14.12.2015</td>
+            <td>Bank</td>
+            <td>scheckkartenformat, österreichisch</td>
+          </tr>
+          <tr>
+            <td><img src="images/geldboerse.jpg" width="*" height="30" alt="mantel"></td>
+            <td><a href="details.html?id=geldboerse&desc=schwarz, mit Geld" title="Mantel">Geldbörse</a></td>
+<td>Geldbörse</td>
+            <td>14.12.2015</td>
+            <td>WC</td>
+            <td>schwarz, mit Geld</td>
+          </tr>
+          <tr>
+            <td><img src="images/hut.jpg" width="*" height="30" alt="mantel"></td>
+            <td><a href="details.html?id=hut&desc=schwarz" title="Mantel">Hut</a></td>
+<td>Kleidung</td>
+            <td>14.12.2015</td>
+            <td>Garderobe</td>
+            <td>schwarz</td>
+          </tr>
+          <tr>
+            <td><img src="images/iphone5.jpg" width="*" height="30" alt="mantel"></td>
+            <td><a href="details.html?id=iphone5&desc=schwarz, Display defekt" title="Mantel">iPhone 5</a></td>
+<td>Handy</td>
+            <td>14.12.2015</td>
+            <td>Ausgang</td>
+            <td>schwarz, Display defekt</td>
           </tr>
           <tr>
             <td><img src="images/mantel.jpg" width="*" height="30" alt="mantel"></td>
-            <td><a href="detail.html" title="Mantel">Mantel</a></td>
-<td>Kleidung</td>
-            <td>14.12.2015</td>
-            <td>Bar</td>
-            <td>braun, lange, Gürtel</td>
-          </tr>
-          <tr>
-            <td><img src="images/mantel.jpg" width="*" height="30" alt="mantel"></td>
-            <td><a href="detail.html" title="Mantel">Mantel</a></td>
-<td>Kleidung</td>
-            <td>14.12.2015</td>
-            <td>Bar</td>
-            <td>braun, lange, Gürtel</td>
-          </tr>
-          <tr>
-            <td><img src="images/mantel.jpg" width="*" height="30" alt="mantel"></td>
-            <td><a href="detail.html" title="Mantel">Mantel</a></td>
-<td>Kleidung</td>
-            <td>14.12.2015</td>
-            <td>Bar</td>
-            <td>braun, lange, Gürtel</td>
-          </tr>
-          <tr>
-            <td><img src="images/mantel.jpg" width="*" height="30" alt="mantel"></td>
-            <td><a href="detail.html" title="Mantel">Mantel</a></td>
-<td>Kleidung</td>
-            <td>14.12.2015</td>
-            <td>Bar</td>
-            <td>braun, lange, Gürtel</td>
-          </tr>
-          <tr>
-            <td><img src="images/mantel.jpg" width="*" height="30" alt="mantel"></td>
-            <td><a href="detail.html" title="Mantel">Mantel</a></td>
-<td>Kleidung</td>
-            <td>14.12.2015</td>
-            <td>Bar</td>
-            <td>braun, lange, Gürtel</td>
-          </tr>
-          <tr>
-            <td><img src="images/mantel.jpg" width="*" height="30" alt="mantel"></td>
-            <td><a href="detail.html" title="Mantel">Mantel</a></td>
-<td>Kleidung</td>
-            <td>14.12.2015</td>
-            <td>Bar</td>
-            <td>braun, lange, Gürtel</td>
-          </tr>
-          <tr>
-            <td><img src="images/mantel.jpg" width="*" height="30" alt="mantel"></td>
-            <td><a href="detail.html" title="Mantel">Mantel</a></td>
+            <td><a href="details.html?id=mantel&desc=braun, lange, Gürtel" title="Mantel">Mantel</a></td>
 <td>Kleidung</td>
             <td>14.12.2015</td>
             <td>Bar</td>
@@ -174,6 +180,101 @@
         </tbody>
       </table>
       </div>
+      
+      
+      <div class="col-md-9" style="display:none;" id="event_alt">
+   <table class="table table-striped table-condensed">
+        <thead>
+          <tr>
+            <th>Abbildung</th>
+            <th>Bezeichnung</th>
+            <th>Kategorie</th>
+            <th>Funddatum</th>
+            <th>Fundort</th>
+            <th>Beschreibung</th>
+          </tr>
+        </thead>
+        <tbody>
+                    
+        </tbody>
+      </table>
+      </div>
 	</div>
+    
+    
+    
+     <div class="container-fluid" style="padding-top: 55px; margin-left: 50px; margin-right: 50px;">
+        <div class="jumbotron">
+            <h2>Ich habe etwas verloren!</h2>
+			<form class="form-horizontal" action="submit.html">
+				<div class="form-group">
+					<div class="col-md-4">
+						<img style="height: 180px" src="images/mantel.jpg" class="thumbnail"/>
+						<div class="form-group">
+							<input type="file" id="inputFile">
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="form-group">
+							<label for="inputDesc" class="col-md-2 control-label">Bezeichnung</label>
+							<div class="col-md-10">
+								<input type="text" class="form-control" id="inputDesc" placeholder="Bezeichnung">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputKategorie" class="col-md-2 control-label">Kategorie</label>
+							<div class="col-md-10">
+								<select class="form-control" id="inputKategorie">
+									<option>Geldbörse</option>
+									<option>Handy</option>
+									<option>Kleidung</option>
+									<option>Diverses</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEvent" class="col-md-2 control-label">Event</label>
+							<div class="col-md-10">
+								<select class="form-control" id="inputEvent">
+                                    <option>Christkindlmarkt</option>
+                                    <option>Frequency</option>
+                                    <option>Halloween Feier</option>
+                                    <option>Informatik Festl</option>
+                                    <option>Maschinenbau Festl</option>
+                                    <option>Mittelalterfest</option>
+                                    <option>Nova Rock</option>
+                                    <option>Osterfeier</option>
+                                    <option>Semester Closing</option>
+                                    <option>Semester Opening</option>
+                                    <option>Sponsion TU</option>
+                                    <option>Weihnachtsfeier</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputEmail" class="col-md-2 control-label">Email address</label>
+							<div class="col-md-10">
+								<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="inputTel" class="col-md-2 control-label">Telefon</label>
+							<div class="col-md-10">
+								<input type="tel" class="form-control" id="inputTel" placeholder="Telefon">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label for="inputBeschreibung">Beschreibung</label>
+					<textarea class="form-control" id="inputBeschreibung" rows="3"></textarea>
+				</div>
+				
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+        </div>
+        </div>
+    
 </body>
 </html>
