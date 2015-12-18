@@ -188,74 +188,74 @@
             </table>
         </div>
     </div>
-    <div class="container-fluid" style="padding-top: 55px; margin-left: 50px; margin-right: 50px;">
-        <div class="jumbotron">
-            <h2>Ich habe etwas verloren!</h2>
-            <form class="form-horizontal" action="submit.html">
-                <div class="form-group">
-                    <div class="col-md-4"> <img style="height: 180px" src="images/mantel.jpg" class="thumbnail" />
-                        <div class="form-group">
-                            <input type="file" id="inputFile">
-                        </div>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="form-group">
-                            <label for="inputDesc" class="col-md-2 control-label">Bezeichnung</label>
-                            <div class="col-md-10">
-                                <input type="text" class="form-control" id="inputDesc" placeholder="Bezeichnung">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputKategorie" class="col-md-2 control-label">Kategorie</label>
-                            <div class="col-md-10">
-                                <select class="form-control" id="inputKategorie">
-                                    <option>Geldbörse</option>
-                                    <option>Handy</option>
-                                    <option>Kleidung</option>
-                                    <option>Diverses</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEvent" class="col-md-2 control-label">Event</label>
-                            <div class="col-md-10">
-                                <select class="form-control" id="inputEvent">
-                                    <option>Christkindlmarkt</option>
-                                    <option>Frequency</option>
-                                    <option>Halloween Feier</option>
-                                    <option>Informatik Festl</option>
-                                    <option>Maschinenbau Festl</option>
-                                    <option>Mittelalterfest</option>
-                                    <option>Nova Rock</option>
-                                    <option>Osterfeier</option>
-                                    <option>Semester Closing</option>
-                                    <option>Semester Opening</option>
-                                    <option>Sponsion TU</option>
-                                    <option>Weihnachtsfeier</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputEmail" class="col-md-2 control-label">Email address</label>
-                            <div class="col-md-10">
-                                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="inputTel" class="col-md-2 control-label">Telefon</label>
-                            <div class="col-md-10">
-                                <input type="tel" class="form-control" id="inputTel" placeholder="Telefon">
-                            </div>
-                        </div>
-                    </div>
+     <div class="container-fluid" style="padding-top: 55px; margin-left: 50px; margin-right: 50px;">
+          <div class="jumbotron">
+              <h2>Ich habe etwas verloren!</h2>
+        <form class="form-horizontal" action="submit.html">
+          <div class="form-group">
+            <div class="col-md-4">
+              <img style="height: 180px" src="images/mantel.jpg" class="thumbnail"/>
+              <div class="form-group">
+                <input type="file" id="inputFile">
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="form-group">
+                <label for="inputDesc" class="col-md-2 control-label">Bezeichnung</label>
+                <div class="col-md-10">
+                  <input type="text" class="form-control" id="inputDesc" placeholder="Bezeichnung" required>
                 </div>
-                <div class="form-group">
-                    <label for="inputBeschreibung">Beschreibung</label>
-                    <textarea class="form-control" id="inputBeschreibung" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="inputKategorie" class="col-md-2 control-label">Kategorie</label>
+                <div class="col-md-10">
+                  <select class="form-control" id="inputKategorie">
+                    <option>Kleidung</option>
+                    <option>Handy</option>
+                    <option>Geldbörse</option>
+                    <option>Diverses</option>
+                  </select>
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-        </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEvent" class="col-md-2 control-label">Event</label>
+                <div class="col-md-10">
+                  <select class="form-control" id="inputEvent">
+                    <option>Semester Opening</option>
+                    <option>Semester Closing</option>
+                    <option>Christkindlmarkt</option>
+                    <option>Weihnachtsfeier</option>
+                    <option>Nova Rock</option>
+                    <option>Frequency</option>
+                    <option>Informatik Festl</option>
+                    <option>Sponsion TU</option>
+                    <option>Osterfeier</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail" class="col-md-2 control-label">Emailadresse</label>
+                <div class="col-md-10">
+                  <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputTel" class="col-md-2 control-label">Telefon</label>
+                <div class="col-md-10">
+                  <input type="tel" class="form-control" id="inputTel" placeholder="Telefon">
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="inputBeschreibung">Beschreibung*</label>
+            <textarea class="form-control" id="inputBeschreibung" rows="3"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-default">Abschicken</button>
+        </form>
+      </div>
     </div>
 </body>
 
